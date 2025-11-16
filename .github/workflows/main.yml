@@ -1,43 +1,43 @@
-姓名: Android CI
+姓名: 姓名：Android CI
 
 在……之上:
 推:
-分支机构: [ "主要" ]
+分支机构: [分支机构：[ "主要" ]"主要" ]
 pull_request:
-分支机构: [ "主要" ]
+分支机构: [分支机构：[ "主要" ]"主要" ]
 
 工作:
 建立:
-run-on: ubuntu-最新
+连续的: 连续的:Ubuntu-最新
 权限:               # 👈 显式授权
-内容: 写
+内容: 内容: 写
 
 步骤:
-      - uses: 操作/结帐@v4
+      - uses: -使用：操作/结帐@v4
 
-      - 姓名: 设置JDK17
-uses: 操作/设置-java@v4
+      - 姓名: -姓名：设置JDK17
+uses: 用途：操作/设置-Java@v4
 和……一起:
 java版: '17'
 分布: 'temurin'
-缓存: Gradle
+缓存: 缓存：Gradle
 
-      - 姓名: 授予gradlew的执行权限
-跑: chmod+x gradlew
+-姓名: -姓名：授予gradlew的执行权限
+跑: 跑：chmod+x gradlew
 
-      - 姓名: 构建版本安装包
-跑: ./gradlew装配释放
+      - 姓名: - 姓名: 构建版本安装包
+跑: 跑：./gradlew装配释放
 
-      #只在push时发行；PR时跳过
-      - 姓名: 释放
-如果: github.event_name=='推'
-uses: softprops/action-gh-release@v2
+#只在push时发行；PR时跳过#只在push时发行；PR时跳过
+      - 姓名: - 姓名: 释放
+如果: 如果：github.event_name=='推''推'
+uses: 用途：softrops/action-gh-release@v2
 和……一起:
-tag_name: v1.0.${{github.run_number}}
-姓名: 版本v1.0.${{github.run_number}}
+tag_name: tag_name:v1.0.${{github.run_number}}{{github.run_number}}
+姓名: 姓名：版本v1.0.${{github.run_number}}{{github.run_number}}
 文件: app/build/outputs/apk/release/app-release.apk
-生成发布注释: 正确
-草案: 假的
-预发行: 假的
+生成发布注释: 生成发布注释: 正确
+草案: 草案: 假的
+预发行: 预发行: 假的
 env:
-GitHub_TOKEN: ${{secrets.GITHUB_TOKEN}}
+GitHub_TOKEN: GitHub_TOKEN：${{secrets.GITHUB_TOKEN}}{{secrets.GITHUB_TOKEN}}
